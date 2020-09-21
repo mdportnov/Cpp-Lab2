@@ -33,8 +33,8 @@ TEST(DeltoidMethods, Parameters){
     a.setT(2);
     ASSERT_EQ(2, a.getT());
 
-    const double PI=3.14159, err=0.0001;
-    char* str = "\nX=2*r*cos(t)+r*cos(2t)\nY=2*r*sin(t)-r*sin(t)\n\n";
+    const double err=0.0001;
+    char* str = "\nX=2*r*cos(t)+r*cos(2t)  Y=2*r*sin(t)-r*sin(t)\n";
     ASSERT_STREQ(str, a.getEquationString().c_str());
 
     ASSERT_EQ(12, a.getIntersectionLength());
