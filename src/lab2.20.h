@@ -7,8 +7,8 @@ namespace lab1_2 {
     int getNaturalInt(int *a);
 
     class Point {
-        double x, y;
     public:
+        double x, y;
         friend std::ostream &operator<<(std::ostream &out, Point &point);
 
         Point(double, double);
