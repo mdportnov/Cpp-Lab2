@@ -4,7 +4,7 @@ namespace lab1_2 {
 
     int dialog(const char *[], int);
 
-    int getNaturalInt(int *a);
+    int getNaturalInt(int*);
 
     class Point {
     public:
@@ -24,7 +24,7 @@ namespace lab1_2 {
     public:
         double getT() const;
 
-        void setT(double t);
+        void setT(double);
 
     public:
         explicit Deltoid(double); // для устранения возможности объявления объекта через "= value"
@@ -32,7 +32,7 @@ namespace lab1_2 {
 
         double getR() const;
 
-        void setR(double r);
+        void setR(double const);
 
         double getIntersectionLength() const;
 
@@ -46,12 +46,12 @@ namespace lab1_2 {
 
         Point getXY() const;
 
-        char *getEquationString() const;
+        std::string getEquationString() const;
     };
 
     void checkZeroR(Deltoid &);
 
-    void errmsg(double &r);
+    void errmsg(double&);
 
     int dialog_input(Deltoid &);
 

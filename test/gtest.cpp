@@ -18,7 +18,7 @@ TEST(DelDeltoidConstructor, TestException) {
 }
 
 TEST(DeltoidMethods, Setters){
-    lab1_2::Deltoid a(3);
+    lab1_2::Deltoid a;
     a.setR(3);
     ASSERT_EQ(3, a.getR());
     ASSERT_ANY_THROW(a.setR(-1));
@@ -34,7 +34,8 @@ TEST(DeltoidMethods, Parameters){
     ASSERT_EQ(2, a.getT());
 
     const double PI=3.14159, err=0.0001;
-    ASSERT_STREQ("\nX=2*r*cos(t)+r*cos(2t)\nY=2*r*sin(t)-r*sin(t)\n\n", a.getEquationString());
+    char* str = "\nX=2*r*cos(t)+r*cos(2t)\nY=2*r*sin(t)-r*sin(t)\n\n";
+    ASSERT_STREQ(str, a.getEquationString().c_str());
 
     ASSERT_EQ(12, a.getIntersectionLength());
     ASSERT_EQ(48, a.getLength());

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "lab2.20.h"
 
 using namespace lab1_2;

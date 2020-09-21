@@ -30,7 +30,7 @@ namespace lab1_2 {
         return r;
     }
 
-    void Deltoid::setR(double r) {
+    void Deltoid::setR(double const r) {
         if(r<0){
             throw std::invalid_argument("Invalid radius");
         }
@@ -58,7 +58,7 @@ namespace lab1_2 {
         return 2 * M_PI * R * R / 9;
     }
 
-    char *Deltoid::getEquationString() const {
+    std::string Deltoid::getEquationString() const {
         return "\nX=2*r*cos(t)+r*cos(2t)\nY=2*r*sin(t)-r*sin(t)\n\n";
     }
 
@@ -189,7 +189,7 @@ namespace lab1_2 {
     }
 
     int dialog_getEquation(Deltoid &deltoid) {
-        std::cout<<deltoid.getEquationString();
+        std::stringstream <<deltoid.getEquationString();
         return 1;
     }
 
