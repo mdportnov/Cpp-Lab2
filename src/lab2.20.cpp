@@ -61,7 +61,7 @@ namespace lab1_2 {
 
     std::string Deltoid::getEquationString() const {
         std::stringstream ss;
-        ss.str("\nX=2*r*cos(t)+r*cos(2t)\nY=2*r*sin(t)-r*sin(t)\n\n");
+        ss.str("X=2*r*cos(t)+r*cos(2t)  Y=2*r*sin(t)-r*sin(t)");
         std::string s = ss.str();
 
         return s;
@@ -194,7 +194,7 @@ namespace lab1_2 {
     }
 
     int dialog_getEquation(Deltoid &deltoid) {
-        std::cout<<deltoid.getEquationString();
+        std::cout<<std::endl<<deltoid.getEquationString()<<std::endl;
         return 1;
     }
 
