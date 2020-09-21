@@ -2,6 +2,7 @@
 #include "lab2.20.h"
 #include <cmath>
 #include <cstring>
+#include <sstream>
 
 namespace lab1_2 {
 
@@ -189,7 +190,10 @@ namespace lab1_2 {
     }
 
     int dialog_getEquation(Deltoid &deltoid) {
-        std::stringstream <<deltoid.getEquationString();
+        std::stringstream ss;
+        ss.str(deltoid.getEquationString());
+        std::string s = ss.str();
+        std::cout<<s;
         return 1;
     }
 
